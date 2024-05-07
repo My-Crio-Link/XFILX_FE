@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-light-gray: lightgray;
+  --clr-white: white;
+  --clr-red: red;
+  --clr-sky-blue: skyblue;
+  --clr-primary-bg: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.16)
+    ),
+    #121212;
+  --clr-pill-modal-bg: rgba(0, 0, 0, 0.4);
+  --upload-modal-box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
+    0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+}
+
+html {
+  background-color: black;
+}

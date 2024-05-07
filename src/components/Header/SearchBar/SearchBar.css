@@ -1,0 +1,30 @@
+.search-bar-wrapper {
+  position: relative;
+  flex-grow: 0.5;
+}
+
+.search-bar-wrapper i {
+  top: 0.5rem;
+  right: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+.search-input {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.icon {
+  min-width: 3rem;
+  min-height: 1rem;
+  position: absolute;
+  color: var(--clr-white);
+  right: 0;
+  background-color: var(--clr-light-gray);
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+}

@@ -1,0 +1,94 @@
+.video-page-flex-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  flex-direction: column;
+}
+
+iframe {
+  width: 80%;
+  height: 60vh;
+  margin-top: 1rem;
+}
+
+.dashboard-wrapper {
+  width: 80%;
+}
+
+.dashboard-wrapper > .dashboard-grid {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+iframe button[title="Copy Link"],
+iframe a.ytp-impression-link,
+iframe button.ytp-button.ytp-expand,
+iframe a[title="Watch on youtube.com"] {
+  display: none !important;
+}
+
+.video-info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--clr-white);
+}
+
+.main-video-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.video-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--clr-light-gray);
+  border-radius: 50%;
+}
+
+.video-stats {
+  width: max-content;
+  color: var(--clr-light-gray);
+}
+
+.video-page-brand-logo {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.btn-like {
+  margin-right: 1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-sky-blue);
+}
+
+.hr-line-after-main-video {
+  color: var(--clr-light-gray);
+  width: 80%;
+}
+
+@media (max-width: 50em) {
+  .video-info-container {
+    flex-direction: column;
+  }
+
+  .video-btn-wrapper {
+    margin-top: 1rem;
+  }
+}

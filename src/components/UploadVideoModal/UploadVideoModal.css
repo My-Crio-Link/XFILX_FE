@@ -1,0 +1,146 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--clr-modal-pill-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal-content {
+  min-width: 20%;
+  min-height: 12.5rem;
+  padding: 25px;
+  padding-top: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1rem;
+  border-radius: 0.25rem;
+  background: var(--clr-primary-bg);
+  box-shadow: var(--upload-modal-box-shadow);
+  letter-spacing: 0.4px;
+  color: var(--clr-light-gray);
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  border-style: groove;
+  border-width: 0.25px;
+  border-color: var(--clr-white);
+  color: var(--clr-white);
+  background: var(--clr-primary-bg);
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-title div:first-child {
+  margin-left: 0.5rem;
+  color: var(--clr-white);
+}
+
+.close-icon-wrapper {
+  cursor: pointer;
+  color: var(--clr-white);
+}
+
+.modal-content input::placeholder {
+  background: var(--clr-primary-bg);
+  color: var(--clr-light-gray);
+}
+
+.modal-content p {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+input[type="date"]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+  margin-left: 0.25rem;
+  color: var(--clr-light-gray);
+}
+
+/* hide our custom/fake placeholder text when in focus to show the default
+ * 'mm/dd/yyyy' value and when valid to show the users' date of birth value.
+ */
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  display: none;
+}
+
+.btn-flex-container {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.btn-modal {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--clr-white);
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-modal-upload {
+  background-color: orangered;
+}
+
+.btn-modal-cancel {
+  margin-left: 0.5rem;
+  background-color: transparent;
+}
+
+#genre-modal-dropdown,
+#age-modal-dropdown {
+  color: var(--clr-light-gray);
+  border-style: groove;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(0.5) !important;
+}
+
+#genre-modal-dropdown option,
+#age-modal-dropdown option {
+  background: rgb(76, 76, 76);
+  font-size: 1rem;
+}
+
+@media (max-width: 55em) {
+  .modal-content {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 45em) {
+  .modal-content {
+    transform: scale(0.79);
+  }
+}
+
+@media (max-width: 20em) {
+  .modal-content {
+    transform: scale(0.69);
+  }
+}
