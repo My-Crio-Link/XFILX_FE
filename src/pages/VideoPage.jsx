@@ -18,9 +18,9 @@ export default function VideoPage() {
   const { votes } = useSelector((state) => state.rating);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(setState(id));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(setState(id));
+  // }, []);
 
   if (!videoDetails) {
     return <Errorpage />;
