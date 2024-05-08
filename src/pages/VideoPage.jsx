@@ -8,7 +8,7 @@ import { getVideoDetails } from "../dummy_data";
 import Errorpage from "./ErrorPage";
 import { useDispatch, useSelector } from "react-redux";
 import { dislikeInc, likeInc, setState } from "../store/rating";
-import { useEffect } from "react";
+import { setLocalStorage } from "../store/localStorage";
 
 dayjs.extend(relativeTime);
 
@@ -18,9 +18,8 @@ export default function VideoPage() {
   const { votes } = useSelector((state) => state.rating);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(setState(id));
-  }, [dispatch, id]);
+  // dispatch(setState(id));
+  setLocalStorage(id, videoDetails);
 
   if (!videoDetails) {
     return <Errorpage />;
