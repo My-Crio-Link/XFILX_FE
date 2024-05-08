@@ -5,11 +5,12 @@ export const setLocalStorage = (id, data) => {
 };
 
 export const getLocalStorage = (id) => {
-  return JSON.parse(localStorage.getItem(id)) || {};
+  return JSON.parse(localStorage.getItem(id)) || "";
 };
 
 export const initialStateHelper = (id) => {
-  if (!getLocalStorage(id)) {
+  const val = getLocalStorage(id);
+  if (!val || val === "") {
     const [videoData] = getVideoDetails(id);
     const { votes } = [videoData];
     setLocalStorage(id, videoData);
