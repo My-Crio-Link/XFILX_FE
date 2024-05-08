@@ -10,11 +10,11 @@ import Errorpage from "./pages/ErrorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <>
       <Route path="/" element={<HomePage />} />
       <Route path="/video/:id" element={<VideoPage />} />
       <Route path="*" element={<Errorpage />} />
-    </Route>
+    </>
   )
 );
 

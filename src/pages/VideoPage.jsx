@@ -18,6 +18,8 @@ export default function VideoPage() {
   const { votes } = useSelector((state) => state.rating);
   const dispatch = useDispatch();
 
+  console.log("hii from video page");
+
   // dispatch(setState(id));
   setLocalStorage(id, videoDetails);
 
