@@ -57,6 +57,7 @@ const reducer = (
 ) => {
   switch (action.type) {
     case INITIAL: {
+      console.log(action.payload);
       return {
         ...state,
         votes: { ...action.payload.votes },
