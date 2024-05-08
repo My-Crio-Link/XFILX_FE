@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { dislikeInc, likeInc, setState } from "../store/rating";
 // import { setLocalStorage } from "../store/localStorage";
 import { useEffect } from "react";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 dayjs.extend(relativeTime);
 
@@ -18,6 +19,8 @@ export default function VideoPage() {
   const [videoDetails] = getVideoDetails(id);
   const { votes } = useSelector((state) => state.rating);
   const dispatch = useDispatch();
+
+  useScrollToTop();
 
   useEffect(() => {
     dispatch(setState(id));
