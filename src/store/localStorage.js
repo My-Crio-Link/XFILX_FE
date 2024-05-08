@@ -5,7 +5,7 @@ export const setLocalStorage = (id, data) => {
 };
 
 export const getLocalStorage = (id) => {
-  return JSON.parse(localStorage.getItem(id));
+  return JSON.parse(localStorage.getItem(id)) || {};
 };
 
 export const initialStateHelper = (id) => {
