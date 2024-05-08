@@ -40,6 +40,7 @@ export const dislikeInc = (id) => {
 
 export const setState = (id) => {
   const votes = initialStateHelper(id);
+  console.log(votes);
   return {
     type: INITIAL,
     payload: { votes },

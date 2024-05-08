@@ -14,6 +14,7 @@ export const initialStateHelper = (id) => {
     const [videoData] = getVideoDetails(id);
     const { votes } = [videoData];
     setLocalStorage(id, videoData);
+    console.log("setting for the first time", votes);
     return votes;
   } else {
     const { votes } = getLocalStorage(id);
