@@ -40,7 +40,6 @@ export const dislikeInc = (id) => {
 
 export const setState = (id) => {
   const votes = initialStateHelper(id);
-  console.log(votes);
   return {
     type: INITIAL,
     payload: { votes },
@@ -58,7 +57,6 @@ const reducer = (
 ) => {
   switch (action.type) {
     case INITIAL: {
-      console.log(action.payload);
       return {
         ...state,
         votes: { ...action.payload.votes },

@@ -35,7 +35,6 @@ export default function GenrePanel() {
   };
 
   const handleAgeFilter = (value) => {
-    console.log(value);
     return results.filter((item) => item.contentRating.includes(value));
   };
 
@@ -56,7 +55,6 @@ export default function GenrePanel() {
   });
 
   function handleGenrePillSelction(event) {
-    console.log(event);
     if (event.target.dataset.value === "All Genre") {
       setGenreObj({
         ...genreObj,
